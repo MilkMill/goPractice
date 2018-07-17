@@ -6,7 +6,7 @@ import {
     TouchableWithoutFeedback 
 } from 'react-native';
 
-const generate = (props) => (
+const Generate = (props) => (
     <TouchableWithoutFeedback 
     onPress={() =>{
         props.add()
@@ -33,5 +33,5 @@ const styles = StyleSheet.create({
     }
   });
 
-  export default generate;
+  export default Generate;
   

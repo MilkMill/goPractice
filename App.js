@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Nav from './src/Nav/nav';
-import Generate from './src/Generator/generate'
-import ListItem from './src/Generator/listItem'
+import Nav from './src/Nav/Nav';
+import Generate from './src/Generator/Generate';
+import ListItem from './src/Generator/ListItem';
+import Input from './src/Input/Input';
+
 
 export default class App extends React.Component {
 
@@ -39,6 +41,8 @@ export default class App extends React.Component {
         <ListItem items={this.state.random}
         delete={this.onItemDelete}
         />
+
+        <Input />
       </View>
     );
   }
