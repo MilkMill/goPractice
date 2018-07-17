@@ -3,7 +3,7 @@ import {
     StyleSheet, 
     Text, 
     View,
-    TouchableWithoutFeedback    
+    TouchableWithoutFeedback 
 } from 'react-native';
 
 const generate = (props) => (

@@ -21,13 +21,24 @@ export default class App extends React.Component {
     })
   }
 
+  onItemDelete = (i) => {
+    const newArray = this.state.random.filter((item, index) => {
+      return i !== index;
+    });
+    this.setState({
+      random: newArray
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Nav nameOfApp={this.state.nameOfApp}/>
         <Generate add={this.onAddRamdom}/>
 
-        <ListItem items={this.state.random}/>
+        <ListItem items={this.state.random}
+        delete={this.onItemDelete}
+        />
       </View>
     );
   }

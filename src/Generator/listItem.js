@@ -3,7 +3,8 @@ import {
     StyleSheet, 
     Text, 
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    TouchableHighlight   
 } from 'react-native';
 
 
@@ -12,8 +13,8 @@ const ListItem = (props) => {
 
         props.items.map((item, i) => (
             <TouchableOpacity
-            onPress={()=>alert('deleted')}
-            kei={i}
+            onPress={()=> props.delete(i)}
+            key={i}
             style={styles.listitem}
             >
             <View>
