@@ -1,10 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+    StyleSheet, 
+    Text, 
+    View,
+    TouchableWithoutFeedback    
+} from 'react-native';
 
-const generate = () => (
+const generate = (props) => (
+    <TouchableWithoutFeedback 
+    onPress={() =>{
+        props.add()
+    }}
+    //onLongPress={()=>alert('Pressed ')}
+    //onPressIn={()=>alert('Pressed')}
+    //onPressOut={()=>alert('Pressed')}
+    //delayLongPress={5000}
+    >
     <View style={styles.generate}>
         <Text>Add number</Text>
     </View>
+    </TouchableWithoutFeedback>
 )
 
 const styles = StyleSheet.create({
