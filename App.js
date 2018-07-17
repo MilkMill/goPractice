@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 import Nav from './src/Nav/Nav';
 import Generate from './src/Generator/Generate';
@@ -36,6 +36,17 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Nav nameOfApp={this.state.nameOfApp}/>
+        
+        <ScrollView
+        style={{width:'100%'}}
+        //onContentSizeChange={(w, h) => alert(h)}
+        //onMomentumScrollBegin={()=>alert('begin')}
+        //onMomentumScrollEnd={()=>alert('end')}
+        onScroll={()=>alert('scrolling')}
+        >
+        <View
+        style={styles.wrapper}
+        >
         <Generate add={this.onAddRamdom}/>
 
         <ListItem items={this.state.random}
@@ -43,6 +54,8 @@ export default class App extends React.Component {
         />
 
         <Input />
+        </View>
+        </ScrollView>
       </View>
     );
   }
@@ -57,4 +70,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
 
   },
+  wrapper: {
+    flex: 1,
+    width:'100%',
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  }
 });

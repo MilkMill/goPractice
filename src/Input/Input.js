@@ -32,7 +32,7 @@ class Input extends Component {
 
     render() {
         return(
-            
+           
             <View style={styles.inputWrapper}>
                 <TextInput
                 style={styles.input}
@@ -47,16 +47,17 @@ class Input extends Component {
             title='Add User'
             onPress={this.onAddUser}
             />
-            <ScrollView>
-                <View>
+            
+                
             {
                 this.state.users.map(item => (
                     <Text style={styles.users} key={item}>{item}</Text>
                 ))
             }
-                </View>
-            </ScrollView>
+                
+            
             </View>
+          
             
         )
     }
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
       padding: 10
     },
     users: {
-        fontSize: 40,
+        fontSize: 20,
         borderWidth: 1,
         borderColor: '#cecece',
         marginBottom: 20
