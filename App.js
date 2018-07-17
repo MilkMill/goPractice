@@ -5,6 +5,7 @@ import Nav from './src/Nav/Nav';
 import Generate from './src/Generator/Generate';
 import ListItem from './src/Generator/ListItem';
 import Input from './src/Input/Input';
+import PickerComponent from './src/Picker/Picker';
 
 
 export default class App extends React.Component {
@@ -42,7 +43,7 @@ export default class App extends React.Component {
         //onContentSizeChange={(w, h) => alert(h)}
         //onMomentumScrollBegin={()=>alert('begin')}
         //onMomentumScrollEnd={()=>alert('end')}
-        onScroll={()=>alert('scrolling')}
+        //onScroll={()=>alert('scrolling')}
         >
         <View
         style={styles.wrapper}
@@ -53,7 +54,8 @@ export default class App extends React.Component {
         delete={this.onItemDelete}
         />
 
-        <Input />
+        {/* <Input /> */}
+        <PickerComponent />
         </View>
         </ScrollView>
       </View>
