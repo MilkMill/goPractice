@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator } from 'react-native';
 
 import Nav from './src/Nav/Nav';
 import Generate from './src/Generator/Generate';
@@ -13,6 +13,7 @@ export default class App extends React.Component {
   state = {
     nameOfApp: 'My Awesome App',
     random: [20, 13],
+    loading: 'true',
   }
 
   onAddRamdom = () => {
@@ -56,6 +57,13 @@ export default class App extends React.Component {
 
         {/* <Input /> */}
         <PickerComponent />
+
+        <ActivityIndicator
+
+          size="small"
+          color="#cecece"
+          
+        />
         </View>
         </ScrollView>
       </View>
